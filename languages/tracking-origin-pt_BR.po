@@ -1,0 +1,77 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracking Origin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-18 15:03+0000\n"
+"PO-Revision-Date: 2024-06-18 15:05+0000\n"
+"Last-Translator: Luiz Reimann\n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.10; wp-6.5.4\n"
+"X-Domain: tracking-origin"
+
+#: includes/admin-menu.php:15
+msgid "Actions"
+msgstr "Ações"
+
+#: includes/admin-menu.php:46
+msgid "Export CSV"
+msgstr "Exportar CSV"
+
+#: includes/admin-menu.php:48
+msgid "Last time counters were reset:"
+msgstr "Contadores zerados pela última vez:"
+
+#: includes/csv-export.php:15 includes/admin-menu.php:15
+msgid "Last User Agent"
+msgstr "Último User Agent"
+
+#: includes/csv-export.php:15 includes/admin-menu.php:15
+msgid "Last Visit (UTC-3)"
+msgstr "Último Acesso (UTC-3)"
+
+#. Author of the plugin
+msgid "Luiz Reimann"
+msgstr "Luiz Reimann"
+
+#: includes/csv-export.php:15 includes/admin-menu.php:15
+msgid "Origin"
+msgstr "Origem"
+
+#: includes/reset-counters.php:17
+msgid "Origin counters reset successfully!"
+msgstr "Contadores de origem limpados com sucesso!"
+
+#: includes/remove-origin.php:18
+msgid "Origin removed successfully!"
+msgstr "Origem removida com sucesso!"
+
+#: includes/admin-menu.php:12 includes/admin-menu.php:54
+#: includes/admin-menu.php:54
+msgid "Origin Statistics"
+msgstr "Estatísticas de Origem"
+
+#. Description of the plugin
+msgid "Plugin to track and display origin statistics of visitors."
+msgstr "Plugin para rastrear e catalogar as origens dos visitantes."
+
+#: includes/admin-menu.php:31
+msgid "Remove"
+msgstr "Remover"
+
+#: includes/admin-menu.php:42
+msgid "Reset Counters"
+msgstr "Limpar Contadores"
+
+#. Name of the plugin
+msgid "Tracking Origin"
+msgstr "Rastrear Origem"
+
+#: includes/csv-export.php:15 includes/admin-menu.php:15
+msgid "Visits"
+msgstr "Visitas"
