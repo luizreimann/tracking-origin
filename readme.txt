@@ -1,0 +1,48 @@
+=== Tracking Origin ===
+Contributors: luizreimann
+Tags: origin, tracking, statistics, csv, admin
+Requires at least: 4.0
+Tested up to: 5.9
+Requires PHP: 7.0
+Stable tag: 1.0
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+Plugin to track and display origin statistics of visitors.
+
+== Description ==
+
+Tracking Origin is a simple WordPress plugin designed to collect and catalog site visits using the GET method "origin". This plugin allows you to track the origin of site visits, making it perfect for redirecting portfolio sites to your main site and tracking their origins without the need for cookies like Google Analytics, which require user consent.
+
+== Features ==
+
+- Collect and catalog visits based on the "origin" parameter in the URL.
+- Display origin statistics in the WordPress admin panel.
+- Delete specific origin records.
+- Reset all counters while preserving origins.
+- Export origin data as a CSV file.
+
+== Installation ==
+
+1. Upload the plugin files to the `/wp-content/plugins/tracking-origin` directory, or install the plugin through the WordPress plugins screen directly.
+2. Activate the plugin through the 'Plugins' screen in WordPress.
+3. Use the `origin` parameter in the URL to start tracking visits, e.g., `yourdomain.com/?origin=github`.
+
+== Usage ==
+
+- To track a visit, include the `origin` parameter in your URL, e.g., `yourdomain.com/?origin=github`.
+- Navigate to the "Origin Statistics" menu in the WordPress admin panel to view the collected data.
+- Use the provided buttons to delete records, reset counters, or export data as a CSV file.
+
+== Support and Contribution ==
+
+For feature requests, please use the(coming soon) on WordPress.org or contact us via email at luizreimann@gmail.com. Feel free to create branches and modify this plugin to suit your needs.
+
+== Changelog ==
+
+= 1.0 =
+* Initial release.
+
+== License ==
+
+This plugin is licensed under the GPLv3 or later.
