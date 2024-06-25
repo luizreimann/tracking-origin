@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tracking Origin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-18 15:03+0000\n"
-"PO-Revision-Date: 2024-06-18 15:05+0000\n"
+"POT-Creation-Date: 2024-06-25 02:30+0000\n"
+"PO-Revision-Date: 2024-06-25 02:34+0000\n"
 "Last-Translator: Luiz Reimann\n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -12,66 +12,96 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.10; wp-6.5.4\n"
+"X-Loco-Version: 2.6.10; wp-6.5.5\n"
 "X-Domain: tracking-origin"
 
-#: includes/admin-menu.php:15
+#: includes/admin-menu.php:34
 msgid "Actions"
 msgstr "Ações"
 
-#: includes/admin-menu.php:46
+#: includes/admin-menu.php:83
+msgid "Day"
+msgstr "Dia"
+
+#: includes/admin-menu.php:84
+msgid ""
+"Enter a number between 1 and 30 to reset counters automatically every N days."
+" Leave empty to disable."
+msgstr ""
+"Digite um número entre 1 e 30 para limpar automaticamente os contadores a "
+"cada N dias. Deixe em branco para desativar."
+
+#: includes/admin-menu.php:71
 msgid "Export CSV"
 msgstr "Exportar CSV"
 
-#: includes/admin-menu.php:48
-msgid "Last time counters were reset:"
-msgstr "Contadores zerados pela última vez:"
+#. Author URI of the plugin
+msgid "https://github.com/luizreimann/tracking-origin"
+msgstr "https://github.com/luizreimann/tracking-origin"
 
-#: includes/csv-export.php:15 includes/admin-menu.php:15
+#: includes/admin-menu.php:73
+msgid "Last time counters were reset:"
+msgstr "Contadores limpos pela última vez em:"
+
+#: includes/csv-export.php:19 includes/admin-menu.php:33
 msgid "Last User Agent"
 msgstr "Último User Agent"
 
-#: includes/csv-export.php:15 includes/admin-menu.php:15
-msgid "Last Visit (UTC-3)"
-msgstr "Último Acesso (UTC-3)"
+#: includes/csv-export.php:19 includes/admin-menu.php:32
+msgid "Last Visit"
+msgstr "Última Visita"
 
 #. Author of the plugin
 msgid "Luiz Reimann"
 msgstr "Luiz Reimann"
 
-#: includes/csv-export.php:15 includes/admin-menu.php:15
+#: includes/admin-menu.php:24
+msgid "Options"
+msgstr "Opções"
+
+#: includes/admin-menu.php:19
+msgid "Options saved successfully!"
+msgstr "Opções salvas com sucesso!"
+
+#: includes/csv-export.php:19 includes/admin-menu.php:30
 msgid "Origin"
 msgstr "Origem"
 
-#: includes/reset-counters.php:17
+#: includes/reset-counters.php:16
 msgid "Origin counters reset successfully!"
-msgstr "Contadores de origem limpados com sucesso!"
+msgstr "Contadores limpos com sucesso!"
 
-#: includes/remove-origin.php:18
+#: includes/remove-origin.php:17
 msgid "Origin removed successfully!"
 msgstr "Origem removida com sucesso!"
 
-#: includes/admin-menu.php:12 includes/admin-menu.php:54
-#: includes/admin-menu.php:54
-msgid "Origin Statistics"
-msgstr "Estatísticas de Origem"
+#: includes/admin-menu.php:23
+msgid "Origins"
+msgstr "Origens"
 
 #. Description of the plugin
 msgid "Plugin to track and display origin statistics of visitors."
-msgstr "Plugin para rastrear e catalogar as origens dos visitantes."
+msgstr ""
+"Plugin para parametrizar e exibir as estatísticas de origem dos visitantes."
 
-#: includes/admin-menu.php:31
+#: includes/admin-menu.php:53
 msgid "Remove"
 msgstr "Remover"
 
-#: includes/admin-menu.php:42
+#: includes/admin-menu.php:66
 msgid "Reset Counters"
 msgstr "Limpar Contadores"
 
-#. Name of the plugin
-msgid "Tracking Origin"
-msgstr "Rastrear Origem"
+#: includes/admin-menu.php:81
+msgid "Reset Counters Automatically Every"
+msgstr "Limpar Contadores Automaticamente a Cada"
 
-#: includes/csv-export.php:15 includes/admin-menu.php:15
+#. Name of the plugin
+#: includes/admin-menu.php:16 includes/admin-menu.php:98
+#: includes/admin-menu.php:98
+msgid "Tracking Origin"
+msgstr "Estatísticas de Origem"
+
+#: includes/csv-export.php:19 includes/admin-menu.php:31
 msgid "Visits"
 msgstr "Visitas"
