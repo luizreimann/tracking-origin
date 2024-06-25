@@ -2,9 +2,9 @@
 /*
 Plugin Name: Tracking Origin
 Description: Plugin to track and display origin statistics of visitors.
-Version: 1.0
+Version: 1.0.1
 Author: Luiz Reimann
-Author URI: https://github.com/luizreimann/wp-tracking-origin
+Author URI: https://github.com/luizreimann/tracking-origin
 Text Domain: tracking-origin
 Domain Path: /languages
 */
@@ -19,18 +19,30 @@ function tracking_origin_load_textdomain() {
 }
 add_action('plugins_loaded', 'tracking_origin_load_textdomain');
 
-// Enqueue admin styles
-function tracking_origin_enqueue_admin_styles() {
-    wp_enqueue_style('tracking-origin-admin-styles', plugin_dir_url(__FILE__) . 'assets/css/styles.css');
+// Enqueue admin styles and scripts
+function tracking_origin_enqueue_admin_styles_scripts() {
+    $plugin_version = '1.0.1'; // Define the plugin version
+    wp_enqueue_style('tracking-origin-admin-styles', plugin_dir_url(__FILE__) . 'assets/css/styles.css', array(), $plugin_version);
+    wp_enqueue_script('tracking-origin-admin-tabs', plugin_dir_url(__FILE__) . 'assets/js/admin-tabs.js', array('jquery'), $plugin_version, true);
 }
-add_action('admin_enqueue_scripts', 'tracking_origin_enqueue_admin_styles');
+add_action('admin_enqueue_scripts', 'tracking_origin_enqueue_admin_styles_scripts');
 
 // Include required files
-require_once plugin_dir_path(__FILE__) . 'includes/admin-menu.php';
-require_once plugin_dir_path(__FILE__) . 'includes/ajax-handlers.php';
-require_once plugin_dir_path(__FILE__) . 'includes/csv-export.php';
-require_once plugin_dir_path(__FILE__) . 'includes/reset-counters.php';
-require_once plugin_dir_path(__FILE__) . 'includes/remove-origin.php';
+$plugin_includes = array(
+    'includes/admin-menu.php',
+    'includes/ajax-handlers.php',
+    'includes/csv-export.php',
+    'includes/reset-counters.php',
+    'includes/remove-origin.php',
+    'includes/reset-autocounters.php',
+);
+
+foreach ($plugin_includes as $file) {
+    $filepath = plugin_dir_path(__FILE__) . $file;
+    if (file_exists($filepath)) {
+        require_once $filepath;
+    }
+}
 
 // Function to register the origin
 function register_origin() {
@@ -46,7 +58,7 @@ function register_origin() {
             $origins[$origin] = array('count' => 1, 'date' => '', 'user_agent' => '');
         }
         
-        $origins[$origin]['date'] = date('Y-m-d H:i:s', time() - 3*60*60);
+        $origins[$origin]['date'] = gmdate('Y-m-d H:i:s');
         $origins[$origin]['user_agent'] = $user_agent;
 
         update_option('visited_origins', $origins);

@@ -15,6 +15,7 @@ To use Tracking Origin, simply install the plugin and reference your site with t
 - Delete specific origin records.
 - Reset all counters while preserving origins.
 - Export origin data as a CSV file.
+- Automatically reset counters every N days, configurable by the user.
 
 ## Installation
 
@@ -25,8 +26,9 @@ To use Tracking Origin, simply install the plugin and reference your site with t
 ## Usage
 
 - To track a visit, include the `origin` parameter in your URL, e.g., `yourdomain.com/?origin=github`.
-- Navigate to the "Origin Statistics" menu in the WordPress admin panel to view the collected data.
+- Navigate to the "Tracking Origin" menu in the WordPress admin panel to view the collected data.
 - Use the provided buttons to delete records, reset counters, or export data as a CSV file.
+- Configure the automatic reset interval in the "Options" tab.
 
 ## Support and Contribution
 
@@ -34,9 +36,15 @@ For feature requests, please use the (coming soon) on WordPress.org or contact u
 
 ## Changelog
 
+**1.0.1**
+- Added automatic reset functionality.
+- Improved user interface with tabbed navigation.
+- Fixed timezone handling using gmdate().
+- Other security improvements.
+
 **1.0**
 - Initial release.
 
 ## License
 
-This plugin is licensed under the GPLv2 or later.
+This plugin is licensed under the GPLv3 or later.

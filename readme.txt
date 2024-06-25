@@ -2,9 +2,9 @@
 Contributors: luizreimann
 Tags: origin, tracking, statistics, csv, admin
 Requires at least: 4.0
-Tested up to: 5.9
+Tested up to: 6.5.5
 Requires PHP: 7.0
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,6 +21,7 @@ Tracking Origin is a simple WordPress plugin designed to collect and catalog sit
 - Delete specific origin records.
 - Reset all counters while preserving origins.
 - Export origin data as a CSV file.
+- Automatically reset counters every N days, configurable by the user.
 
 == Installation ==
 
@@ -31,14 +32,21 @@ Tracking Origin is a simple WordPress plugin designed to collect and catalog sit
 == Usage ==
 
 - To track a visit, include the `origin` parameter in your URL, e.g., `yourdomain.com/?origin=github`.
-- Navigate to the "Origin Statistics" menu in the WordPress admin panel to view the collected data.
+- Navigate to the "Tracking Origin" menu in the WordPress admin panel to view the collected data.
 - Use the provided buttons to delete records, reset counters, or export data as a CSV file.
+- Configure the automatic reset interval in the "Options" tab.
 
 == Support and Contribution ==
 
-For feature requests, please use the(coming soon) on WordPress.org or contact us via email at luizreimann@gmail.com. Feel free to create branches and modify this plugin to suit your needs.
+For feature requests, please use the (coming soon) on WordPress.org or contact us via email at luizreimann@gmail.com. Feel free to create branches and modify this plugin to suit your needs.
 
 == Changelog ==
+
+= 1.0.1 =
+* Added automatic reset functionality.
+* Improved user interface with tabbed navigation.
+* Fixed timezone handling using gmdate().
+* Other security improvements.
 
 = 1.0 =
 * Initial release.
