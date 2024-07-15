@@ -3,6 +3,8 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
+
+// Handle the post requests for different functions
 function handle_post_requests() {
     if (isset($_POST['action'])) {
         switch ($_POST['action']) {

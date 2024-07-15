@@ -21,7 +21,7 @@ add_action('plugins_loaded', 'tracking_origin_load_textdomain');
 
 // Enqueue admin styles and scripts
 function tracking_origin_enqueue_admin_styles_scripts() {
-    $plugin_version = '1.0.1'; // Define the plugin version
+    $plugin_version = '1.0.2'; // Define the plugin version
     wp_enqueue_style('tracking-origin-admin-styles', plugin_dir_url(__FILE__) . 'assets/css/styles.css', array(), $plugin_version);
     wp_enqueue_script('tracking-origin-admin-tabs', plugin_dir_url(__FILE__) . 'assets/js/admin-tabs.js', array('jquery'), $plugin_version, true);
 }
@@ -29,12 +29,13 @@ add_action('admin_enqueue_scripts', 'tracking_origin_enqueue_admin_styles_script
 
 // Include required files
 $plugin_includes = array(
-    'includes/admin-menu.php',
-    'includes/ajax-handlers.php',
-    'includes/csv-export.php',
-    'includes/reset-counters.php',
-    'includes/remove-origin.php',
-    'includes/reset-autocounters.php',
+    'views/admin-menu.php',
+    'functions/create-menu.php',
+    'functions/handle-post-requests.php',
+    'functions/csv-export.php',
+    'functions/reset-counters.php',
+    'functions/remove-origin.php',
+    'functions/reset-autocounters.php',
 );
 
 foreach ($plugin_includes as $file) {
