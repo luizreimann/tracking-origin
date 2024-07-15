@@ -3,14 +3,12 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-// Function to display statistics in the WordPress admin panel
-function display_origin_statistics() {
+function display_tracking_origin() {
     $origins = get_option('visited_origins', array());
     $last_time_counters_reset = get_option('last_time_counters_reset', 'N/A');
     $reset_frequency = get_option('reset_frequency', '');
     $tab = isset($_GET['tab']) ? $_GET['tab'] : 'origins';
 
-    ob_start();
     ?>
     <div class="wrap">
         <h1><?php esc_html_e('Tracking Origin', 'tracking-origin'); ?></h1>
@@ -24,7 +22,7 @@ function display_origin_statistics() {
             <a href="?page=origin-statistics&tab=options" class="nav-tab <?php echo $tab === 'options' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Options', 'tracking-origin'); ?></a>
         </h2>
         <div id="origins" class="tab-content" style="display: <?php echo $tab === 'origins' ? 'block' : 'none'; ?>;">
-            <table class="widefat striped">
+            <table class="widefat striped margin-top-10">
                 <thead>
                     <tr>
                         <th scope="col"><?php esc_html_e('Origin', 'tracking-origin'); ?></th>
@@ -37,7 +35,7 @@ function display_origin_statistics() {
                 <tbody>
                     <?php foreach ($origins as $origin => $data) :
                         $count = isset($data['count']) ? $data['count'] : 0;
-                        $last_visit = isset($data['date']) ? $data['date'] : esc_html__('N/A', 'tracking-origin');
+                        $last_visit = isset($data['date']) ? get_date_from_gmt($data['date'], 'Y-m-d H:i:s') : esc_html__('N/A', 'tracking-origin');
                         $user_agent = isset($data['user_agent']) ? $data['user_agent'] : esc_html__('N/A', 'tracking-origin');
                         ?>
                         <tr>
@@ -90,12 +88,5 @@ function display_origin_statistics() {
         </div>
     </div>
     <?php
-    echo wp_kses_post(ob_get_clean());
 }
-
-// Function to create the statistics menu in the WordPress admin panel
-function create_origin_statistics_menu() {
-    add_menu_page(__('Tracking Origin', 'tracking-origin'), __('Tracking Origin', 'tracking-origin'), 'manage_options', 'origin-statistics', 'display_origin_statistics', 'dashicons-networking', 10);
-}
-add_action('admin_menu', 'create_origin_statistics_menu');
 ?>

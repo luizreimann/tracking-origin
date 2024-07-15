@@ -36,6 +36,12 @@ For feature requests, please use the (coming soon) on WordPress.org or contact u
 
 ## Changelog
 
+**1.0.2**
+- Fixed saving buttons and options.
+- Fixed Last Visit not showing timezone-based.
+- Other minor fixes.
+- Improved organization of folders and files for future updates.
+
 **1.0.1**
 - Added automatic reset functionality.
 - Improved user interface with tabbed navigation.
