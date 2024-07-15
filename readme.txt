@@ -4,7 +4,7 @@ Tags: origin, tracking, statistics, csv, admin
 Requires at least: 4.0
 Tested up to: 6.5.5
 Requires PHP: 7.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Tracking Origin
 Description: Plugin to track and display origin statistics of visitors.
-Version: 1.0.1
+Version: 1.0.2
 Author: Luiz Reimann
 Author URI: https://github.com/luizreimann/tracking-origin
 Text Domain: tracking-origin
